@@ -71,6 +71,11 @@ open class CandleChartDataSet: LineScatterCandleRadarChartDataSet, CandleChartDa
             _barSpace = newValue.clamped(to: 0...0.45)
         }
     }
+
+    /// the corner radius of the candle bar,
+    ///
+    /// **default**: 0.0
+    open var barCornerRadius = CGFloat(0.0)
     
     /// should the candle bars show?
     /// when false, only "ticks" will show
