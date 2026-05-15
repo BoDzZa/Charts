@@ -22,6 +22,10 @@ public protocol CandleChartDataSetProtocol: LineScatterCandleRadarChartDataSetPr
     /// the space that is left out on the left and right side of each candle,
     /// **default**: 0.1 (10%), max 0.45, min 0.0
     var barSpace: CGFloat { get set }
+
+    /// the corner radius of the candle bar,
+    /// **default**: 0.0
+    var barCornerRadius: CGFloat { get set }
     
     /// should the candle bars show?
     /// when false, only "ticks" will show
