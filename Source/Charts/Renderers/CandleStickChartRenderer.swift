@@ -9,7 +9,7 @@
 //  https://github.com/ChartsOrg/Charts
 //
 
-import Foundation
+import UIKit
 import CoreGraphics
 
 open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
