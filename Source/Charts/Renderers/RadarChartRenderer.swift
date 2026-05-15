@@ -6,7 +6,7 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/Charts
+//  https://github.com/ChartsOrg/Charts
 //
 
 import Foundation
@@ -354,7 +354,7 @@ open class RadarChartRenderer: LineRadarRenderer
         for high in indices
         {
             guard
-                let set = chart.data?[high.dataSetIndex] as? RadarChartDataSetProtocol,
+                let set = chart.data?[safe: high.dataSetIndex] as? RadarChartDataSetProtocol,
                 set.isHighlightEnabled
                 else { continue }
             

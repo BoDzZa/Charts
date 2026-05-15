@@ -6,7 +6,7 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/Charts
+//  https://github.com/ChartsOrg/Charts
 //
 
 import Foundation
@@ -203,7 +203,7 @@ open class ScatterChartRenderer: LineScatterCandleRadarRenderer
         for high in indices
         {
             guard
-                let set = scatterData[high.dataSetIndex] as? ScatterChartDataSetProtocol,
+                let set = scatterData[safe: high.dataSetIndex] as? ScatterChartDataSetProtocol,
                 set.isHighlightEnabled
                 else { continue }
             

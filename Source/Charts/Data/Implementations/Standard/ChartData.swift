@@ -6,7 +6,7 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/Charts
+//  https://github.com/ChartsOrg/Charts
 //
 
 import Foundation
@@ -451,6 +451,10 @@ extension ChartData: MutableCollection
     {
         get { return dataSets[position] }
         set { self._dataSets[position] = newValue }
+    }
+    
+    public subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
     }
 }
 

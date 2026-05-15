@@ -6,7 +6,7 @@
 //  A port of MPAndroidChart for iOS
 //  Licensed under Apache License 2.0
 //
-//  https://github.com/danielgindi/Charts
+//  https://github.com/ChartsOrg/Charts
 //
 
 import Foundation
@@ -362,7 +362,7 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
         for high in indices
         {
             guard
-                let set = candleData[high.dataSetIndex] as? CandleChartDataSetProtocol,
+                let set = candleData[safe: high.dataSetIndex] as? CandleChartDataSetProtocol,
                 set.isHighlightEnabled
                 else { continue }
             
